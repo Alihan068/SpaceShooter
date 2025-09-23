@@ -53,8 +53,6 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,7 +74,6 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -126,6 +123,7 @@ GameObject:
   - component: {fileID: -8586477576424253122}
   - component: {fileID: -3697434423502459277}
   - component: {fileID: 1030855214179662001}
+  - component: {fileID: 5328027241244950063}
   m_Layer: 7
   m_Name: RedFighter
   m_TagString: Enemy
@@ -173,7 +171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 566f9548e083802478b3ae7aa48b270d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 25
+  isPlayer: 0
+  score: 50
 --- !u!114 &-3697434423502459277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,8 +202,45 @@ MonoBehaviour:
   projectilePrefab: {fileID: 816395180155620768, guid: db9bded95f3f1f84f9a8c23cee32f358, type: 3}
   projectileSpeed: 4
   projectileLifeTime: 5
-  baseFireRate: 0.5
+  baseFireRate: 0.6
   isAI: 1
   firingRateVariance: 1
   minimumFiringRate: 0.5
   isFiring: 0
+--- !u!70 &5328027241244950063
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4383641630702562527}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.47, y: 0.1}
+  m_Direction: 0

@@ -53,8 +53,6 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -76,14 +74,13 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2906946257702632081, guid: 291f51b80752e9442b417a6b8b354e42, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.34, y: 0.3}
   m_AdaptiveModeThreshold: 0.5
@@ -126,6 +123,7 @@ GameObject:
   - component: {fileID: 8934259230447261680}
   - component: {fileID: -5616417458279275914}
   - component: {fileID: -2379481066745848375}
+  - component: {fileID: 798313618056044758}
   m_Layer: 7
   m_Name: BlueFighter
   m_TagString: Enemy
@@ -174,6 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  isPlayer: 0
+  score: 20
 --- !u!114 &-5616417458279275914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,10 +200,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 816395180155620768, guid: db9bded95f3f1f84f9a8c23cee32f358, type: 3}
-  projectileSpeed: 5
+  projectileSpeed: 4
   projectileLifeTime: 5
-  baseFireRate: 0.5
+  baseFireRate: 0.4
   isAI: 1
   firingRateVariance: 1
   minimumFiringRate: 0.5
   isFiring: 0
+--- !u!70 &798313618056044758
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3120356198687079318}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 0.6}
+  m_Direction: 0

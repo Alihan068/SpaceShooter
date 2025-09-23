@@ -4,11 +4,20 @@ public class Health : MonoBehaviour
 {
 
     [SerializeField] int health = 100;
+    [SerializeField] bool isPlayer;
+    [SerializeField] int score = 20;
 
+   LevelManager levelManager;
     AudioManager audioPlayer;
+    ScoreKeeper scoreKeeper;
+    public int GetHealth() {
+        return health;
+    }
 
     private void Awake() {
-        audioPlayer = GetComponent<AudioManager>();
+        audioPlayer = FindFirstObjectByType<AudioManager>();
+        scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
+        levelManager = FindAnyObjectByType<LevelManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -22,9 +31,21 @@ public class Health : MonoBehaviour
     }
 
     void TakeDamage(int damage) {
+
         health -= damage;
+
         if (health < 0) {
-            Destroy(gameObject);
+            Death();
         }
+    }
+    void Death() {
+        if (!isPlayer) { 
+            scoreKeeper.ModifyScore(score);
+        }
+        else {
+            levelManager.LoadGameOver();
+        }
+
+            Destroy(gameObject);
     }
 }
