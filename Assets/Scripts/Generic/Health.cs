@@ -41,6 +41,7 @@ public class Health : MonoBehaviour
     void Death() {
         if (!isPlayer) { 
             scoreKeeper.ModifyScore(score);
+            audioPlayer.PlayDeathClip();
         }
         else {
             levelManager.LoadGameOver();
