@@ -220,6 +220,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1072,7 +1098,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bold01_0: -7735976312561767276
+      Bold01_1: 8351579389580615619
+      Bold01_10: -1043103580373855680
+      Bold01_11: -6587141834625273538
+      Bold01_12: 5448189252563028985
+      Bold01_13: -5347150365359928586
+      Bold01_14: -1240355112875876937
+      Bold01_15: -4216354727558511634
+      Bold01_16: 7943218337996666655
+      Bold01_17: 5809660147605605565
+      Bold01_18: -6820293694635670486
+      Bold01_19: -4121255100803994886
+      Bold01_2: 2101069075817102898
+      Bold01_20: 3863166521440847498
+      Bold01_21: 3712970485167034234
+      Bold01_22: 28056168915964868
+      Bold01_23: -2475793090214749595
+      Bold01_24: 2104854375479224519
+      Bold01_25: -855428723593794931
+      Bold01_26: -8182358015502909669
+      Bold01_27: -5674378258220510672
+      Bold01_28: 3191244878790404623
+      Bold01_29: 773057762853871270
+      Bold01_3: -4592914122554421222
+      Bold01_30: -2871586974820868955
+      Bold01_31: 447857608487063276
+      Bold01_32: 2034102250763458051
+      Bold01_33: -6988366556229878987
+      Bold01_34: 568975771413991667
+      Bold01_35: -6723085550000349245
+      Bold01_36: -7132110299611752821
+      Bold01_37: 4742785522908640286
+      Bold01_4: 6276612824515594273
+      Bold01_5: -8101856329830801322
+      Bold01_6: -7149510454989045757
+      Bold01_7: -7850510648724261467
+      Bold01_8: -1548558661628485283
+      Bold01_9: 8553881151607359095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

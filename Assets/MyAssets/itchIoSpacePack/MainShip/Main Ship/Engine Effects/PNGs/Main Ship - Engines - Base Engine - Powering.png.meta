@@ -130,6 +130,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -322,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Main Ship - Engines - Base Engine - Powering_0: -6312141839824158945
+      Main Ship - Engines - Base Engine - Powering_1: -2898342163641753231
+      Main Ship - Engines - Base Engine - Powering_2: -6725825898144586467
+      Main Ship - Engines - Base Engine - Powering_3: -1631708233531104754
+      Main Ship - Engines - Base Engine - Powering_4: 2575770746470772467
+      Main Ship - Engines - Base Engine - Powering_5: 7986044913709646492
+      Main Ship - Engines - Base Engine - Powering_6: 4157562548873233528
+      Main Ship - Engines - Base Engine - Powering_7: -9080046158021778427
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

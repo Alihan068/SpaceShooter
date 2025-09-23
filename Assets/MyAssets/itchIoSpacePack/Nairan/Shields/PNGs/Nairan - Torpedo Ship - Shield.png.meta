@@ -130,6 +130,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -322,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Torpedo Ship - Shield_0: -4083674507052104798
+      Nairan - Torpedo Ship - Shield_1: -6732256377356126351
+      Nairan - Torpedo Ship - Shield_2: 4843007361122674159
+      Nairan - Torpedo Ship - Shield_3: -4206146260366427969
+      Nairan - Torpedo Ship - Shield_4: 8352140381190071696
+      Nairan - Torpedo Ship - Shield_5: -7429548521408270019
+      Nairan - Torpedo Ship - Shield_6: -4629234685459186776
+      Nairan - Torpedo Ship - Shield_7: -5727560610424497727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

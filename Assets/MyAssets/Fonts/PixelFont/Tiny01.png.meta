@@ -217,6 +217,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1047,7 +1073,44 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tiny01_0: 7993188257038602729
+      Tiny01_1: -3857727242041628150
+      Tiny01_10: -2275353091912414328
+      Tiny01_11: 4793846059101338002
+      Tiny01_12: 5605956941146380911
+      Tiny01_13: -3254760188365290085
+      Tiny01_14: 8798646203376344261
+      Tiny01_15: -3866128476225298132
+      Tiny01_16: 6314789164931585026
+      Tiny01_17: -886560005525040660
+      Tiny01_18: 3125842099568096563
+      Tiny01_19: -3299919831541062156
+      Tiny01_2: 2197865334541000580
+      Tiny01_20: 2080819033655282817
+      Tiny01_21: -3301191306845140028
+      Tiny01_22: -6829199553070339670
+      Tiny01_23: 5293500178756282912
+      Tiny01_24: -2726808251284486540
+      Tiny01_25: -5260981776518984532
+      Tiny01_26: 8668132655633012172
+      Tiny01_27: -554022777481343719
+      Tiny01_28: -8609213225338130536
+      Tiny01_29: -974357329698782259
+      Tiny01_3: 2475929901459330915
+      Tiny01_30: -3569696563693773346
+      Tiny01_31: 4891625997778041849
+      Tiny01_32: -8333018553468527888
+      Tiny01_33: -8416606886458261406
+      Tiny01_34: -6156917473783288078
+      Tiny01_35: 62938458421610176
+      Tiny01_36: 8039393753917988375
+      Tiny01_4: -3333809801133195573
+      Tiny01_5: 6690015284624305322
+      Tiny01_6: 3394554347917975142
+      Tiny01_7: -1570998407581793025
+      Tiny01_8: 9194761026700087279
+      Tiny01_9: 2697968811003671227
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

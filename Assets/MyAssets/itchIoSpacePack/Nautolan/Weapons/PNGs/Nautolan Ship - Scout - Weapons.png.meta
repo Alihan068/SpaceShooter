@@ -127,6 +127,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -297,7 +323,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nautolan Ship - Scout - Weapons_0: -890952559573945103
+      Nautolan Ship - Scout - Weapons_1: 7980697631490298994
+      Nautolan Ship - Scout - Weapons_2: 1318467518653205625
+      Nautolan Ship - Scout - Weapons_3: -2312787045562173165
+      Nautolan Ship - Scout - Weapons_4: 760396124151451747
+      Nautolan Ship - Scout - Weapons_5: -8240889753089356293
+      Nautolan Ship - Scout - Weapons_6: 7680083943011690149
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

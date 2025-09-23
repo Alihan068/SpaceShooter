@@ -241,6 +241,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1247,7 +1273,52 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Oldschool01_0: -6582574459694907635
+      Oldschool01_1: 9161723417309391251
+      Oldschool01_10: -4932462853091545990
+      Oldschool01_11: 1186124681695870281
+      Oldschool01_12: 5639322749369079199
+      Oldschool01_13: -1722980314936447351
+      Oldschool01_14: 7227537252325451289
+      Oldschool01_15: 7664182960476362754
+      Oldschool01_16: 4401036348172702215
+      Oldschool01_17: -3153153392403137559
+      Oldschool01_18: 6530151662112505366
+      Oldschool01_19: 201853595339839748
+      Oldschool01_2: -5957863844796671137
+      Oldschool01_20: -7923892876779159109
+      Oldschool01_21: -8950762502343092044
+      Oldschool01_22: 2119881549932886909
+      Oldschool01_23: -8501874196643164336
+      Oldschool01_24: 4781106371882610388
+      Oldschool01_25: -6803128933750804927
+      Oldschool01_26: -2963028003768216846
+      Oldschool01_27: 3394833627009033594
+      Oldschool01_28: -3041442712595487704
+      Oldschool01_29: -9137303548625654813
+      Oldschool01_3: 5975927039010385476
+      Oldschool01_30: 1228046516871076443
+      Oldschool01_31: -2481386727381148860
+      Oldschool01_32: -311805161049818938
+      Oldschool01_33: -7459995526996975466
+      Oldschool01_34: -4107912525128317373
+      Oldschool01_35: -2491487631939462919
+      Oldschool01_36: -7869340292605379692
+      Oldschool01_37: -292234589414656066
+      Oldschool01_38: 5349298487281595648
+      Oldschool01_39: 6983295357092420491
+      Oldschool01_4: 9002987328888668486
+      Oldschool01_40: -2713417033378322063
+      Oldschool01_41: -5403110544626361821
+      Oldschool01_42: -4127740037239282330
+      Oldschool01_43: 5055266333949273977
+      Oldschool01_44: -7306462464297022958
+      Oldschool01_5: 6988861353143490101
+      Oldschool01_6: -8187435470542104099
+      Oldschool01_7: 3115346712071095268
+      Oldschool01_8: 567877051434629089
+      Oldschool01_9: 3140756100763588650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

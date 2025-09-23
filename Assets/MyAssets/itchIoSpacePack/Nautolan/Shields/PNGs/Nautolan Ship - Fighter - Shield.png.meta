@@ -136,6 +136,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -372,7 +398,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nautolan Ship - Fighter - Shield_0: -6224225608094846585
+      Nautolan Ship - Fighter - Shield_1: 2529805734400724559
+      Nautolan Ship - Fighter - Shield_2: -8213071868104261743
+      Nautolan Ship - Fighter - Shield_3: -6081021943920716823
+      Nautolan Ship - Fighter - Shield_4: 8188362881744391039
+      Nautolan Ship - Fighter - Shield_5: 3237925735769235851
+      Nautolan Ship - Fighter - Shield_6: -1455001265870424380
+      Nautolan Ship - Fighter - Shield_7: 4493927736464409300
+      Nautolan Ship - Fighter - Shield_8: 5534541246012000453
+      Nautolan Ship - Fighter - Shield_9: -9203300766648876042
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

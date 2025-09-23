@@ -130,6 +130,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -322,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Battlecruiser - Shield_0: 6828217732792461546
+      Nairan - Battlecruiser - Shield_1: 5464801080578364317
+      Nairan - Battlecruiser - Shield_2: 7525203622807348454
+      Nairan - Battlecruiser - Shield_3: -6403369823512001576
+      Nairan - Battlecruiser - Shield_4: 126195514435842806
+      Nairan - Battlecruiser - Shield_5: -8785800699072922013
+      Nairan - Battlecruiser - Shield_6: -4160936954187608481
+      Nairan - Battlecruiser - Shield_7: -5151712906850203133
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -373,6 +373,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2347,7 +2373,96 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Small02_0: 4967400304057096594
+      Small02_1: 8767912860243290634
+      Small02_10: 5726404684639422815
+      Small02_11: -7804580772408220922
+      Small02_12: -5983462387854646970
+      Small02_13: 837428358090494281
+      Small02_14: -123106327162369089
+      Small02_15: 4219230561027586786
+      Small02_16: 8502463010013365483
+      Small02_17: 3418569582165069205
+      Small02_18: -115091717459643277
+      Small02_19: 5392676774116705707
+      Small02_2: -2355524522211964659
+      Small02_20: -6585301991439072335
+      Small02_21: -2770919549024225411
+      Small02_22: 4904297182819729155
+      Small02_23: -2416950519689892336
+      Small02_24: 6661768666755521392
+      Small02_25: -4011507518736548547
+      Small02_26: -5544685080573719937
+      Small02_27: 757003677651635532
+      Small02_28: 3764401772387488406
+      Small02_29: -1803432167819040
+      Small02_3: 2715924208567329243
+      Small02_30: 1274203092468844907
+      Small02_31: -3407104975557994421
+      Small02_32: 9147033343415358911
+      Small02_33: 7898456977712244400
+      Small02_34: -7982622582625467845
+      Small02_35: 9151497507730452734
+      Small02_36: -4446403496691783324
+      Small02_37: -5988677013170363110
+      Small02_38: 5964711854843171262
+      Small02_39: 6306201255820821757
+      Small02_4: -4739889404557506255
+      Small02_40: 7401476447730532548
+      Small02_41: -4870326308225177594
+      Small02_42: 7230686806850951072
+      Small02_43: 3722105438733900243
+      Small02_44: -6709913492051004807
+      Small02_45: -8473692159474977777
+      Small02_46: -7291666889054873630
+      Small02_47: -9138868246096125163
+      Small02_48: -5443937169635964873
+      Small02_49: -7235318982595310218
+      Small02_5: -3503358253768185415
+      Small02_50: 7243342801192424318
+      Small02_51: -6827279765967040465
+      Small02_52: -3433739668427385569
+      Small02_53: 3182335486437527157
+      Small02_54: 2235542230883170128
+      Small02_55: 1511730453580515670
+      Small02_56: 6109303935640681421
+      Small02_57: 7171213017136833090
+      Small02_58: -6469926976512116627
+      Small02_59: -6513200609996989806
+      Small02_6: -9116538308388647992
+      Small02_60: -5949611782044679110
+      Small02_61: 3711214145934087605
+      Small02_62: 3053554853138568424
+      Small02_63: 4806348580739951889
+      Small02_64: -8879866145262909524
+      Small02_65: 7357452477903395520
+      Small02_66: -4026095331676244194
+      Small02_67: -6155966676758946124
+      Small02_68: 1236435351469576032
+      Small02_69: 3407326854893333737
+      Small02_7: 7181692620754768101
+      Small02_70: -4173671275670814565
+      Small02_71: -7093784903579488799
+      Small02_72: 2902112292325743414
+      Small02_73: 2040471398146887209
+      Small02_74: -809607673400165596
+      Small02_75: -6521132410985594851
+      Small02_76: -7375684763630539148
+      Small02_77: -8245060448146367802
+      Small02_78: -7949560910665213016
+      Small02_79: -1647477667211251704
+      Small02_8: -6226112160301618663
+      Small02_80: -1820429683590864349
+      Small02_81: -7954909602526745957
+      Small02_82: 6128456799038660070
+      Small02_83: -3235928195040519096
+      Small02_84: -6891909355736990493
+      Small02_85: -5587759047966830142
+      Small02_86: 1341624186066699395
+      Small02_87: -6557592775076132953
+      Small02_88: -2858556800046402359
+      Small02_9: 9193098165926105005
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

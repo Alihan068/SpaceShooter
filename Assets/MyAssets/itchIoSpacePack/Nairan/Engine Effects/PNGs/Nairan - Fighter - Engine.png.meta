@@ -130,6 +130,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -322,7 +348,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nairan - Fighter - Engine_0: 2021064506979229775
+      Nairan - Fighter - Engine_1: -6549742969626178329
+      Nairan - Fighter - Engine_2: 4141742500818047364
+      Nairan - Fighter - Engine_3: -3637639654692783463
+      Nairan - Fighter - Engine_4: -5248891611871230022
+      Nairan - Fighter - Engine_5: -1281974716089768212
+      Nairan - Fighter - Engine_6: -5482203104370416502
+      Nairan - Fighter - Engine_7: 8976500142663689614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

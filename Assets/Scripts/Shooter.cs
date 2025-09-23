@@ -19,11 +19,16 @@ public class Shooter : MonoBehaviour {
     AudioManager audioPlayer;
 
     private void Awake() {
-        audioPlayer = FindFirstObjectByType<AudioManager>();
+        if (!audioPlayer)
+            audioPlayer = FindFirstObjectByType<AudioManager>();
     }
 
     void Start() {
-        if (isAI) { 
+        if (!projectilePrefab)
+            Debug.LogError($"{name}: projectilePrefab is not assigned.");
+        if (!audioPlayer)
+            Debug.LogWarning($"{name}: AudioManager not found. Firing will be silent.");
+        if (isAI) {
             isFiring = true;
         }
     }
@@ -61,7 +66,9 @@ public class Shooter : MonoBehaviour {
             float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
 
-            audioPlayer.PlayShootingClip();
+            if (audioPlayer) {
+                audioPlayer.PlayShootingClip();
+            }
 
             yield return new WaitForSeconds(timeToNextProjectile);
         }

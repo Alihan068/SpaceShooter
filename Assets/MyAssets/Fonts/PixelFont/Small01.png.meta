@@ -208,6 +208,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -972,7 +998,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Small01_0: -584292630034528476
+      Small01_1: -7383725650774219637
+      Small01_10: -5048218683715971910
+      Small01_11: -6744403919962800404
+      Small01_12: 8927672679192823686
+      Small01_13: 7801470929367818803
+      Small01_14: -7961611206257673123
+      Small01_15: 5232725931100991791
+      Small01_16: 8867535608932266158
+      Small01_17: 2554975148023406357
+      Small01_18: 3827232750203274816
+      Small01_19: -7053068418637480452
+      Small01_2: -7976326789819209072
+      Small01_20: 5436093568941763636
+      Small01_21: 2720322606992824992
+      Small01_22: 3008727240671055608
+      Small01_23: 9092348284303741913
+      Small01_24: -220615039910749439
+      Small01_25: -170398186955271596
+      Small01_26: 4694096028540251179
+      Small01_27: 1301785485814188218
+      Small01_28: -9159722541879084157
+      Small01_29: -3691581950751491984
+      Small01_3: -8663028669942914958
+      Small01_30: 4400826464873769361
+      Small01_31: -4513668059983280387
+      Small01_32: -4610394511509482451
+      Small01_33: -6658338329464508402
+      Small01_4: -2660199173314745244
+      Small01_5: -4129606952597468521
+      Small01_6: -2443881863744852865
+      Small01_7: -3429353658577458553
+      Small01_8: 9183871501928284454
+      Small01_9: 8908470981872984780
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
