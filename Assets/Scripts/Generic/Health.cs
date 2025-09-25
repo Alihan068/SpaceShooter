@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
    LevelManager levelManager;
     AudioManager audioPlayer;
     ScoreKeeper scoreKeeper;
+    DamageDealer damageDealer;
     public int GetHealth() {
         return health;
     }
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        DamageDealer damageDealer = other.GetComponent<DamageDealer>();
+        damageDealer = other.GetComponent<DamageDealer>();
 
         if (damageDealer != null ) {
             if (isPlayer) {
@@ -31,6 +32,10 @@ public class Health : MonoBehaviour
             audioPlayer.PlayDamagingClip();
             damageDealer.Hit();
         }
+    }
+
+    private void OnParticleTrigger() {
+        
     }
 
     void TakeDamage(int damage) {
