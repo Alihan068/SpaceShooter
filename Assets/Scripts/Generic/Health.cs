@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField] bool isPlayer;
     [SerializeField] int score = 20;
 
-   LevelManager levelManager;
+    LevelManager levelManager;
     AudioManager audioPlayer;
     ScoreKeeper scoreKeeper;
     DamageDealer damageDealer;
@@ -25,9 +25,6 @@ public class Health : MonoBehaviour
         damageDealer = other.GetComponent<DamageDealer>();
 
         if (damageDealer != null ) {
-            if (isPlayer) {
-                Debug.Log(other.gameObject.name + "A");
-            }
             TakeDamage(damageDealer.GetDamage());
             audioPlayer.PlayDamagingClip();
             damageDealer.Hit();
@@ -42,7 +39,7 @@ public class Health : MonoBehaviour
 
         health -= damage;
 
-        if (health < 0) {
+        if (health <= 0) {
             Death();
         }
     }
@@ -58,4 +55,14 @@ public class Health : MonoBehaviour
             Destroy(gameObject);
     }
 
+
+    private void OnParticleCollision(GameObject other)
+    {
+        damageDealer = other.GetComponent<DamageDealer>();
+
+        Debug.Log($"{name} was hit by particles from {other.name}", this);
+        if (damageDealer != null) {
+            TakeDamage(damageDealer.GetDamage());
+        }
+    }
 }

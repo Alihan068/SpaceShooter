@@ -39,7 +39,7 @@ public class PlayerControler : MonoBehaviour {
 
     void OnMove(InputValue value) {
         rawInput = value.Get<Vector2>();
-        Debug.Log(rawInput);
+        //Debug.Log(rawInput);
     }
 
     void OnAttack(InputValue value) {
