@@ -24,6 +24,9 @@ public class Health : MonoBehaviour
         DamageDealer damageDealer = other.GetComponent<DamageDealer>();
 
         if (damageDealer != null ) {
+            if (isPlayer) {
+                Debug.Log(other.gameObject.name + "A");
+            }
             TakeDamage(damageDealer.GetDamage());
             audioPlayer.PlayDamagingClip();
             damageDealer.Hit();
@@ -49,4 +52,5 @@ public class Health : MonoBehaviour
 
             Destroy(gameObject);
     }
+
 }
