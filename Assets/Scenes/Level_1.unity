@@ -5669,19 +5669,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 52264697915096529, guid: b3551982b9da38d49a5d2fceebae533b, type: 3}
   m_PrefabInstance: {fileID: 8120767777886948818}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &918953414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918953410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01be876b4c4ce3b42af25233b0c42a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
 --- !u!114 &918953415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10823,13 +10810,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
-  - {fileID: 11400000, guid: fedea2053cc36bb4aabe9096972cfc5c, type: 2}
   - {fileID: 11400000, guid: 280bbed7e22a4f347a7736ed5aa2f186, type: 2}
   - {fileID: 11400000, guid: f3a7c527c10ffc449a61f1e7416d7f21, type: 2}
   - {fileID: 11400000, guid: f7ab64d9d2c87aa4eab0cb8347531ddd, type: 2}
   - {fileID: 11400000, guid: f0fd885447e76b846b1fc7e527dfaf5b, type: 2}
+  - {fileID: 11400000, guid: fedea2053cc36bb4aabe9096972cfc5c, type: 2}
   timeBetweenWaves: 2
-  loopCount: 1
+  bossesDefeated: 1
   isLooping: 1
   activeBoss: 0
 --- !u!4 &1696383530
@@ -11262,9 +11249,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 52264697915096529, guid: b3551982b9da38d49a5d2fceebae533b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 918953415}
-    - targetCorrespondingSourceObject: {fileID: 52264697915096529, guid: b3551982b9da38d49a5d2fceebae533b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 918953414}
     - targetCorrespondingSourceObject: {fileID: 52264697915096529, guid: b3551982b9da38d49a5d2fceebae533b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 918953418}
