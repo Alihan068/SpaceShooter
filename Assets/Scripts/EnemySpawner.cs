@@ -103,7 +103,7 @@ public class EnemySpawner : MonoBehaviour {
 
     }
     float RoundFloatToOneDigit(float x) {
-        return Mathf.Round(x * 10.0f) / 0.1f;
+        return Mathf.Round(x * 10f) / 10f;
     }
 
 }
