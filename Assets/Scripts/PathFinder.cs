@@ -34,7 +34,9 @@ public class PathFinder : MonoBehaviour {
             }
         }
         else {
-            Destroy(gameObject);
+            if (!CompareTag("Boss")){
+                Destroy(gameObject);
+            }
         }
 
     }

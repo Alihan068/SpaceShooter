@@ -11,14 +11,16 @@ public class Health : MonoBehaviour
     AudioManager audioPlayer;
     ScoreKeeper scoreKeeper;
     DamageDealer damageDealer;
+    EnemySpawner enemySpawner;
     public int GetHealth() {
         return health;
     }
 
     private void Awake() {
+        enemySpawner = FindFirstObjectByType<EnemySpawner>();
         audioPlayer = FindFirstObjectByType<AudioManager>();
         scoreKeeper = FindFirstObjectByType<ScoreKeeper>();
-        levelManager = FindAnyObjectByType<LevelManager>();
+        levelManager = FindFirstObjectByType<LevelManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -44,6 +46,8 @@ public class Health : MonoBehaviour
         }
     }
     void Death() {
+
+        if (gameObject.tag == "Boss") enemySpawner.activeBoss = false; 
         if (!isPlayer) { 
             scoreKeeper.ModifyScore(score);
             audioPlayer.PlayDeathClip();
