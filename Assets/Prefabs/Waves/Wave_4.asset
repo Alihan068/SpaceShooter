@@ -14,17 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
-  - {fileID: 4757137217257197061, guid: f9e08875291124f4d9e3e54ddad10351, type: 3}
   pathPrefab: {fileID: 1926543307388859899, guid: f2319f63d7da2a042bd3334d844521f2, type: 3}
   moveSpeed: 5
+  isBossWave: 0
+  waveEnemyCount: 10
   timeBetweenEnemySpawn: 0.2
   spawnTimeVariance: 0
   minimumSpawnTime: 0.2
