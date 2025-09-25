@@ -7,17 +7,18 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Wave Config", fileName = "New Wave Config")]
 public class WaveConfigSO : ScriptableObject {
 
-    [SerializeField] List<GameObject> enemyPrefabs;
+    public List<GameObject> enemyPrefabs;
 
     [SerializeField] Transform pathPrefab;
     [SerializeField] float moveSpeed = 5f;
 
     [SerializeField] bool isBossWave = false;
+    [SerializeField] int waveEnemyCount = 10;
 
     [SerializeField] float timeBetweenEnemySpawn = 1f;
     [SerializeField] float spawnTimeVariance = 0f;
     [SerializeField] float minimumSpawnTime = 0.2f;
-    
+
     public Transform GetStartingWaypoint() {
         return pathPrefab.GetChild(0);
     }
@@ -31,7 +32,7 @@ public class WaveConfigSO : ScriptableObject {
 
     }
 
-    public float GetMoveSpeed() { 
+    public float GetMoveSpeed() {
         return moveSpeed;
     }
 
@@ -46,10 +47,13 @@ public class WaveConfigSO : ScriptableObject {
     public float GetRandomSpawnTime() {
         float spawnTime = Random.Range(timeBetweenEnemySpawn - spawnTimeVariance, timeBetweenEnemySpawn + spawnTimeVariance);
 
-        return  Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
+        return Mathf.Clamp(spawnTime, minimumSpawnTime, float.MaxValue);
     }
 
     public bool IsBossWave() {
         return isBossWave;
+    }
+    public int GetWaveEnemyCount() {
+        return waveEnemyCount;
     }
 }

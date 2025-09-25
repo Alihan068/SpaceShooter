@@ -47,7 +47,11 @@ public class Health : MonoBehaviour
     }
     void Death() {
 
-        if (gameObject.tag == "Boss") enemySpawner.activeBoss = false; 
+        if (gameObject.tag == "Boss") { 
+            enemySpawner.activeBoss = false;
+            enemySpawner.bossesDefeated++;
+        }
+
         if (!isPlayer) { 
             scoreKeeper.ModifyScore(score);
             audioPlayer.PlayDeathClip();
