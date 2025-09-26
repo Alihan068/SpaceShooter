@@ -10999,19 +10999,23 @@ PrefabInstance:
       objectReference: {fileID: 918953429}
     - target: {fileID: 1168609778549770165, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: moveSpeed
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1168609778549770165, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: turnSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1168609778549770165, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
+      propertyPath: homingTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3425821623489620507, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.6204633
+      value: -2.35
       objectReference: {fileID: 0}
     - target: {fileID: 3425821623489620507, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.0217967
+      value: -2.94
       objectReference: {fileID: 0}
     - target: {fileID: 3425821623489620507, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11044,6 +11048,14 @@ PrefabInstance:
     - target: {fileID: 3425821623489620507, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -170.963
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617863425632119921, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5577787417334716791, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6545009093022176671, guid: 2bbea55c10783c241bbcee98b3e77bac, type: 3}
       propertyPath: m_Name
