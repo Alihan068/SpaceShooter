@@ -1,23 +1,30 @@
+using NUnit.Framework;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour {
     [SerializeField] BossDifficulityEnum[] bossDifficulityEnum;
     [System.Serializable]
-    private class BossModifiers {
-        [SerializeField] GameObject[] projectilePrefab;
-        [SerializeField] Transform[] weaponTransform;
-        [SerializeField] float projectileSpeed;
-        [SerializeField] float projectileTurnSpeed;
-        [SerializeField] float projectileLifeTime = 5f;
+    public class BossModifiers {
+        //[SerializeField] GameObject[] projectilePrefab;
+        //[SerializeField] Transform[] weaponTransform;
+        //[SerializeField] float projectileSpeed;
+        //[SerializeField] float projectileTurnSpeed;
+        //[SerializeField] float projectileLifeTime = 5f;
 
-        [SerializeField] float minimumFireRate = 0.2f;
-        [SerializeField] float baseFireRate = 0.2f;
-        [SerializeField] float firingRateVariance = 0.2f;
-
+        //[SerializeField] float minimumFireRate = 0.2f;
+        //[SerializeField] float baseFireRate = 0.2f;
+        //[SerializeField] float firingRateVariance = 0.2f;
+        [SerializeField] AttackPatternSO[] attackPatterns;
+        AttackPatternSO currentAttackPattern;
         Transform transform;
         AudioManager audioPlayer;
+
+        Coroutine coroutine;
 
         public int extraHp;
         public int extraDamage;
@@ -27,54 +34,74 @@ public class BossBehaviour : MonoBehaviour {
         bool canFireMissle;
         bool canShield;
 
+        float timeBetweenAttackSequence = 10;
+
+        void Start() {
+            //StartCoroutine(BossAttackOrder(currentAttackPattern, timeBetweenAttackSequence));
+        }
+
         void Update() {
-            //switch (BossDifficulityEnum[]) {
-               
-            //}
+            
         }
-        IEnumerator BossMachineGun(float fireTime) {
-            while (true) {
-                GameObject instance = Instantiate(projectilePrefab[1], transform.position, Quaternion.identity);
+        IEnumerator BossAttackOrder(AttackPatternSO attackPattern, float cooldownBetweenAttacks) {
+            foreach (AttackPatternSO currentAttackPattern in attackPatterns) {
 
-                Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
+                //StartCoroutine(AttackSequence(currentAttackPattern.GetProjectilePrefab(), currentAttackPattern.GetProjectileSpawnPos(), currentAttackPattern.GetBaseFireRate(), currentAttackPattern.GetMinimumFireRate(), currentAttackPattern.GetFiringRateVariance(), currentAttackPattern.GetProjectileLifeTime(), currentAttackPattern.GetProjectileSpeed()));
 
-                if (rb2d != null) {
-                    rb2d.linearVelocity = transform.up * projectileSpeed;
-                }
-                Destroy(instance, projectileLifeTime);
+                yield return new WaitForSeconds(cooldownBetweenAttacks);
+            }
+            yield return new WaitForSeconds(cooldownBetweenAttacks);
+        }
 
-                float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
-                timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
+        IEnumerator AttackSequence(GameObject projectilePrefab, List<Transform> projectileSpawnPos, float baseFireRate, float minimumFireRate, float firingRateVariance, float projectileLifeTime, float projectileSpeed) {
+            foreach (Transform weaponPos in projectileSpawnPos) {
+                while (true) {
+                    GameObject instance = Instantiate(projectilePrefab, weaponPos.position, Quaternion.identity);
 
-                if (audioPlayer) {
-                    audioPlayer.PlayShootingClip();
+                    Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
+
+                    if (rb2d != null) {
+                        rb2d.linearVelocity = transform.up * projectileSpeed;
+                    }
+                    Destroy(instance, projectileLifeTime);
+
+                    float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
+                    timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
+
+                    if (audioPlayer) {
+                        audioPlayer.PlayShootingClip();
+                    }
+                    yield return new WaitForSeconds(timeToNextProjectile);
                 }
             }
-            yield return new WaitForSeconds(fireTime);
+            yield return null;
         }
 
-        IEnumerator MissleLauncher(float fireTime) {
-            while (true) {
-                GameObject instance = Instantiate(projectilePrefab[1], transform.position, Quaternion.identity);
+        //    IEnumerator MissleLauncher(float fireTime, float baseFireRate, float minimumFireRate, float firingRateVariance, float projectileLifeTime, float projectileSpeed) {
+        //        foreach (Transform weapon in weaponTransform) {
+        //            while (true) {
+        //                GameObject instance = Instantiate(projectilePrefab[2], weapon.position, Quaternion.identity);
 
-                Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
+        //                Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
 
-                if (rb2d != null) {
-                    rb2d.linearVelocity = transform.up * projectileSpeed;
-                }
-                Destroy(instance, projectileLifeTime);
+        //                if (rb2d != null) {
+        //                    rb2d.linearVelocity = transform.up * projectileSpeed;
+        //                }
+        //                Destroy(instance, projectileLifeTime);
 
-                float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
-                timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
+        //                float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
+        //                timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
 
-                if (audioPlayer) {
-                    audioPlayer.PlayShootingClip();
-                }
-            }
-            yield return new WaitForSeconds(fireTime);
-        }
+        //                if (audioPlayer) {
+        //                    audioPlayer.PlayShootingClip();
+        //                }
+        //            }
+        //        }
+        //        yield return new WaitForSeconds(fireTime);
+        //    }
+        //}
+
     }
-
 }
 
 

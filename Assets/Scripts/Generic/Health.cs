@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
-{
+public class Health : MonoBehaviour {
 
     [SerializeField] int health = 100;
     [SerializeField] bool isPlayer;
@@ -26,7 +25,7 @@ public class Health : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         damageDealer = other.GetComponent<DamageDealer>();
 
-        if (damageDealer != null ) {
+        if (damageDealer != null) {
             TakeDamage(damageDealer.GetDamage());
             audioPlayer.PlayDamagingClip();
             damageDealer.Hit();
@@ -34,7 +33,7 @@ public class Health : MonoBehaviour
     }
 
     private void OnParticleTrigger() {
-        
+
     }
 
     void TakeDamage(int damage) {
@@ -47,12 +46,12 @@ public class Health : MonoBehaviour
     }
     void Death() {
 
-        if (gameObject.tag == "Boss") { 
+        if (gameObject.CompareTag("Boss")) {
             enemySpawner.activeBoss = false;
             enemySpawner.bossesDefeated++;
         }
 
-        if (!isPlayer) { 
+        if (!isPlayer) {
             scoreKeeper.ModifyScore(score);
             audioPlayer.PlayDeathClip();
         }
@@ -60,12 +59,11 @@ public class Health : MonoBehaviour
             levelManager.LoadGameOver();
         }
 
-            Destroy(gameObject);
+        Destroy(gameObject);
     }
 
 
-    private void OnParticleCollision(GameObject other)
-    {
+    private void OnParticleCollision(GameObject other) {
         damageDealer = other.GetComponent<DamageDealer>();
 
         Debug.Log($"{name} was hit by particles from {other.name}", this);
