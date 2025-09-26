@@ -1,81 +1,101 @@
-using System.Collections;
-using UnityEditor.Build.Content;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BossBehaviour : MonoBehaviour {
-    [SerializeField] BossDifficulityEnum[] bossDifficulityEnum;
-    [System.Serializable]
-    private class BossModifiers {
-        [SerializeField] GameObject[] projectilePrefab;
-        [SerializeField] Transform[] weaponTransform;
-        [SerializeField] float projectileSpeed;
-        [SerializeField] float projectileTurnSpeed;
-        [SerializeField] float projectileLifeTime = 5f;
+public class BossBehaviour : MonoBehaviour
+{
+    [SerializeField] private BossDifficultyData[] bossDifficultySettings;
+    [SerializeField] private BossDifficulityEnum currentDifficulty = BossDifficulityEnum.Diff1;
+    private Transform[] firePoints;
 
-        [SerializeField] float minimumFireRate = 0.2f;
-        [SerializeField] float baseFireRate = 0.2f;
-        [SerializeField] float firingRateVariance = 0.2f;
+    AudioManager audioPlayer;
+    Coroutine attackLoopCo;
 
-        Transform transform;
-        AudioManager audioPlayer;
+    private void Awake()
+    {
+        audioPlayer = FindFirstObjectByType<AudioManager>();
 
-        public int extraHp;
-        public int extraDamage;
-        public bool shield;
-
-        bool canFire;
-        bool canFireMissle;
-        bool canShield;
-
-        void Update() {
-            //switch (BossDifficulityEnum[]) {
-               
-            //}
+        var firePointsList = new List<Transform>();
+        foreach (Transform child in GetComponentsInChildren<Transform>())
+        {
+            if (child.CompareTag("BossWeapon"))
+                firePointsList.Add(child);
         }
-        IEnumerator BossMachineGun(float fireTime) {
-            while (true) {
-                GameObject instance = Instantiate(projectilePrefab[1], transform.position, Quaternion.identity);
+        firePoints = firePointsList.ToArray();
+    }
 
-                Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
+    private void OnEnable()
+    {
+        RestartAttackLoop();
+    }
 
-                if (rb2d != null) {
-                    rb2d.linearVelocity = transform.up * projectileSpeed;
-                }
-                Destroy(instance, projectileLifeTime);
+    private void OnDisable()
+    {
+        if (attackLoopCo != null) StopCoroutine(attackLoopCo);
+        attackLoopCo = null;
+    }
 
-                float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
-                timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
+    public void SetDifficulty(BossDifficulityEnum difficulty)
+    {
+        currentDifficulty = difficulty;
+        RestartAttackLoop();
+    }
 
-                if (audioPlayer) {
-                    audioPlayer.PlayShootingClip();
-                }
+    void RestartAttackLoop()
+    {
+        if (attackLoopCo != null) StopCoroutine(attackLoopCo);
+        var entry = GetEntry(currentDifficulty);
+        if (entry != null && entry.patterns != null && entry.patterns.Length > 0)
+            attackLoopCo = StartCoroutine(AttackLoop(entry));
+    }
+
+    IEnumerator AttackLoop(BossDifficultyData entry)
+    {
+        int i = 0;
+        while (true)
+        {
+            var pattern = entry.patterns[i];
+            if (pattern != null)
+            {
+                float duration = GetRandomPatternDuration(entry);
+                yield return StartCoroutine(pattern.ExecuteBurst(firePoints, duration, audioPlayer));
             }
-            yield return new WaitForSeconds(fireTime);
-        }
-
-        IEnumerator MissleLauncher(float fireTime) {
-            while (true) {
-                GameObject instance = Instantiate(projectilePrefab[1], transform.position, Quaternion.identity);
-
-                Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
-
-                if (rb2d != null) {
-                    rb2d.linearVelocity = transform.up * projectileSpeed;
-                }
-                Destroy(instance, projectileLifeTime);
-
-                float timeToNextProjectile = Random.Range(baseFireRate - firingRateVariance, baseFireRate + firingRateVariance);
-                timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFireRate, float.MaxValue);
-
-                if (audioPlayer) {
-                    audioPlayer.PlayShootingClip();
-                }
+            else
+            {
+                yield return null;
             }
-            yield return new WaitForSeconds(fireTime);
+
+            i = (i + 1) % entry.patterns.Length;
         }
     }
 
+    float GetRandomPatternDuration(BossDifficultyData entry)
+    {
+        float t = Random.Range(entry.timeBetweenPatterns - entry.patternTimeVariance,
+                               entry.timeBetweenPatterns + entry.patternTimeVariance);
+        return Mathf.Clamp(t, entry.minimumPatternTime, float.MaxValue);
+    }
+
+    BossDifficultyData GetEntry(BossDifficulityEnum diff)
+    {
+        if (bossDifficultySettings == null) return null;
+        for (int i = 0; i < bossDifficultySettings.Length; i++)
+        {
+            var e = bossDifficultySettings[i];
+            if (e != null && e.difficulty == diff) return e;
+        }
+        return null;
+    }
+
+    [System.Serializable]
+    public class BossDifficultyData
+    {
+        public BossDifficulityEnum difficulty;
+
+        public AttackPatternSO[] patterns;
+
+        public float timeBetweenPatterns = 1f;
+        public float patternTimeVariance = 0f;
+        public float minimumPatternTime = 0.2f;
+    }
 }
-
-
-

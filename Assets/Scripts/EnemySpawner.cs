@@ -80,9 +80,11 @@ public class EnemySpawner : MonoBehaviour {
         }
         while (isLooping && !activeBoss);
     }
+
     void RandomSummonIndex() {
         Instantiate(currentWave.GetEnemyPrefab(Random.Range(0, currentWave.GetEnemyCount())));
     }
+
     int WaveSummonAmount() {
         if (currentWave.IsBossWave()) {
             return currentWave.GetWaveEnemyCount();
@@ -92,12 +94,15 @@ public class EnemySpawner : MonoBehaviour {
             return Mathf.FloorToInt(currentWave.GetWaveEnemyCount() + TotalDiffIncreaseRate());
         }
     }
+
     float TotalDiffIncreaseRate() {
         return currentWave.GetWaveEnemyCount() * (TimeDifficulity() + DefeatedBossDiffIncrease());
     }
+
     float TimeDifficulity() {
         return RoundFloatToOneDigit(Time.fixedTime / 50);
     }
+
     float DefeatedBossDiffIncrease() {
         return RoundFloatToOneDigit(bossesDefeated / 4);
 
