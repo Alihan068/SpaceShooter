@@ -32,7 +32,7 @@ public class HomingMissle : MonoBehaviour {
 
             float rotateAmount = Vector3.Cross(direction, transform.up).z;
 
-            rb2d.angularVelocity = -rotateAmount * turnSpeed;
+            rb2d.angularVelocity = -rotateAmount * turnSpeed; //if you change rotateamount to positive, it avoids you instead
 
             rb2d.linearVelocity = transform.up * moveSpeed;
         }
