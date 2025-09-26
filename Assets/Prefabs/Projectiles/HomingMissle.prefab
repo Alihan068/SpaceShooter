@@ -52,6 +52,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73,6 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
@@ -115,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6545009093022176671}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.99689215, w: 0.07877922}
+  m_LocalRotation: {x: 0, y: 0, z: -0.996892, w: 0.078781135}
   m_LocalPosition: {x: -1.5542647, y: 1.2005574, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -130,7 +133,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6545009093022176671}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01be876b4c4ce3b42af25233b0c42a45, type: 3}
   m_Name: 
@@ -212,6 +215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37997d3bebbe7a49ab5ef1f7d3fd398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  turnSpeed: 50
-  target: {fileID: 0}
+  moveSpeed: 1
+  homingTimer: 10
+  rotateSpeed: 360

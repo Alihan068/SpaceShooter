@@ -54,7 +54,7 @@ public class Shooter : MonoBehaviour {
     IEnumerator FireContiniously() {
 
         while (true) {
-            GameObject instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            GameObject instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity, transform);
 
             Rigidbody2D rb2d = instance.GetComponent<Rigidbody2D>();
 
