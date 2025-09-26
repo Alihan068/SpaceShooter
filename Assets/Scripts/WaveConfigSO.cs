@@ -19,8 +19,25 @@ public class WaveConfigSO : ScriptableObject {
     [SerializeField] float spawnTimeVariance = 0f;
     [SerializeField] float minimumSpawnTime = 0.2f;
 
+    [SerializeField, HideInInspector] Vector3 basePathScale = Vector3.zero;
+
     public Transform GetStartingWaypoint() {
         return pathPrefab.GetChild(0);
+    }
+
+
+    public Vector2 PathLocalScale
+    {
+        get => pathPrefab.localScale;
+        set => pathPrefab.localScale = value;
+    }
+
+
+    public Vector3 GetBasePathScale()
+    {
+        if (basePathScale == Vector3.zero && pathPrefab.transform)
+            basePathScale = pathPrefab.localScale;
+        return basePathScale == Vector3.zero ? Vector3.one : basePathScale;
     }
 
     public List<Transform> GetWaypoints() {

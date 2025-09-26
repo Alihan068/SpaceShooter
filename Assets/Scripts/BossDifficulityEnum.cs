@@ -1,5 +1,3 @@
-using System.Collections;
-using UnityEngine;
 public enum BossDifficulityEnum { 
     Diff1,
     Diff2,

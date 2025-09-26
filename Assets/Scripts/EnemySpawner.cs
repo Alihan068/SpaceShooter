@@ -59,6 +59,19 @@ public class EnemySpawner : MonoBehaviour {
 
         do {
             foreach (WaveConfigSO wave in waveConfigs) {
+
+                var cam = Camera.main;
+                float currentAspect = cam ? cam.aspect : (float)Screen.width / Screen.height;
+
+                const float referenceAspect = 16f / 9f;
+                float factor = currentAspect / referenceAspect;
+
+                Vector3 baseScale = wave.GetBasePathScale();
+                Vector3 scaled = new Vector3(baseScale.x * factor, baseScale.y, baseScale.z);
+                wave.PathLocalScale = scaled;
+
+                Debug.Log($"Path Scale (aspect {currentAspect}) = {scaled}");
+
                 currentWave = wave;
                 if (currentWave.IsBossWave()) {
                     Debug.Log("BossWave!");
